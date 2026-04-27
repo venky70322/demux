@@ -1,0 +1,10 @@
+name: DEMUX CI
+on: push
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - run: pwd
+      - run: ls
+      - run: unset VERILATOR_ROOT && make all
